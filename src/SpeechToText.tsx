@@ -39,7 +39,7 @@ const SpeechToText: React.FC = () => {
         setError('');
 
         try {
-            const res = await axios.post('http://localhost:5000/api/chat', {
+            const res = await axios.post('https://backend-8rwr.onrender.com/api/chat', {
                 prompt: transcript,
                 role: role.trim(),
                 apiKey: apiKey.trim(), // Send to backend
@@ -143,3 +143,4 @@ const SpeechToText: React.FC = () => {
 };
 
 export default SpeechToText;
+
